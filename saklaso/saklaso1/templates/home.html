@@ -1,0 +1,15 @@
+<a href="{% url  'create_city' %}"> create new city</a>
+
+<br>
+<br>
+<br>
+
+{% for city in cities %}
+    <a href="{% url 'update_city' city.id %}">{{city.name}}</a>  
+
+    <a href="{% url 'delete_city' city.id %}">   delete</a>  
+    
+    <br/>
+{%endfor%}
+
+</form>
